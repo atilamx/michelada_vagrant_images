@@ -3,19 +3,19 @@
 
 Vagrant images to run several security tests 
 
-## images included
+### Images included
 freebsd-12-2
 kali-3
 
-## Development workflow
+### Development workflow
 
 1. Download the repo
 
-##Start FreeBSD
+### Start FreeBSD
 ```bash 
 cd freebsd && vagrant up && vagrant ssh 
 ```
-##Stop FreeBSD
+### Stop FreeBSD
 ```bash
 cd freebsd && vagrant halt
 ```
@@ -24,18 +24,18 @@ cd freebsd && vagrant halt
 ```bash
 cd kali && vagrant up && vagrant ssh
 ```
-##Stop Kali
+### Stop Kali
 ```bash
 cd kali && vagrant halt
 ```
-##Start kali & FreeBSD to test firewall rules
+### Start kali & FreeBSD to test firewall rules
 ```bash
 cd firewall_tests && vagrant up 
 vagrant ssh freebsd
 vagrant ssh kali
 ```
 
-##Stop kali & FreeBSD 
+### Stop kali & FreeBSD 
 ```bash
 cd firewall_tests && vagrant halt
 ```
