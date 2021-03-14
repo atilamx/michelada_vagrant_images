@@ -4,9 +4,9 @@
 Vagrant images to run several security tests 
 
 ### Images included
-FreeBSD-12-2
+***FreeBSD-12-2
 
-Kali-Linux-3
+***Kali-Linux-3
 
 ### Development workflow
 
