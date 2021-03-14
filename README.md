@@ -20,7 +20,7 @@ cd freebsd && vagrant up && vagrant ssh
 cd freebsd && vagrant halt
 ```
 
-##Start Kali
+### Start Kali
 ```bash
 cd kali && vagrant up && vagrant ssh
 ```
