@@ -1,0 +1,36 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# All Vagrant configuration is done below. The "2" in Vagrant.configure
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you know what
+# you're doing.
+Vagrant.configure("2") do |config|
+  config.vm.define "kali" do |kali|
+    kali.vm.box = "michelada/Kali"
+    kali.ssh.username = 'vagrant'
+    kali.ssh.private_key_path = "./id_rsa_insecure"
+    kali.ssh.insert_key = false
+    kali.vm.synced_folder '.', '/vagrant', disabled: true
+    kali.vm.box_version = "0.0.2"
+    kali.vm.network "private_network", ip: "192.168.33.2",
+    auto_config: false
+  end
+  config.vm.define "freebsd" do |freebsd|
+    freebsd.vm.box = "michelada/FreeBSD-12-2"
+    freebsd.vm.box_version = "0.0.1"
+    freebsd.ssh.username = 'unix'
+    freebsd.ssh.private_key_path = "./id_rsa_insecure"
+    freebsd.ssh.insert_key = false
+    freebsd.vm.synced_folder '.', '/vagrant', disabled: true
+    freebsd.vm.network "private_network", ip: "192.168.33.3" 
+    freebsd.vm.provision "shell", 
+    inline: "sudo ifconfig em1 down", run: 'always'
+    freebsd.vm.provision "shell", 
+    inline: "sleep 10", run: 'always'
+    freebsd.vm.provision "shell",
+    inline: "sudo ifconfig em1 up", run: 'always'
+    freebsd.vm.provision "shell",
+    inline: "echo Cluster up", run: 'always'
+  end
+end
