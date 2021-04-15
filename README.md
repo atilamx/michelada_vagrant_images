@@ -8,6 +8,8 @@ Vagrant images to run several security tests
 
 ***Kali-Linux-3
 
+***Metasploitable-2
+
 ### Requirements
 **VirtualBox
 https://www.virtualbox.org/wiki/Downloads
@@ -37,6 +39,10 @@ cd kali && vagrant up && vagrant ssh
 cd kali && vagrant halt
 ```
 ### Start kali & FreeBSD to test firewall rules
+#### Follow this video 
+
+https://www.youtube.com/watch?v=IMqGi5lOiV4
+
 ```bash
 cd firewall_tests && vagrant up 
 vagrant ssh freebsd
