@@ -8,6 +8,13 @@ Vagrant images to run several security tests
 
 ***Kali-Linux-3
 
+### Requirements
+**VirtualBox
+https://www.virtualbox.org/wiki/Downloads
+
+**Vagrant
+https://www.vagrantup.com
+
 ### Development workflow
 
 1. Download the repo
