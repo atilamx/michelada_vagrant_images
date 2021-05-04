@@ -65,6 +65,11 @@ cd metasploitable && vagrant halt
 ```
 
 ## Practice Kali vs Metasploitable
+
+#### Follow this video 
+
+https://www.youtube.com/watch?v=PM-eVrc9JY4
+
 ```
 cd metasploitable && vagrant up
 vagrant ssh 
